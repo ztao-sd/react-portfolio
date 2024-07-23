@@ -5,18 +5,17 @@
 	// Update the 'dockerComposeFile' list if you have more compose files or use different names.
 	// The .devcontainer/docker-compose.yml file contains any overrides you need/want to make.
 	"dockerComposeFile": [
-		"../compose.yaml",
-		"docker-compose.yml"
+		"docker-compose.dev.yml"
 	],
 	// The 'service' property is the name of the service for the container that VS Code should
 	// use. Update this value and .devcontainer/docker-compose.yml to the real service name.
-	"service": "workspaces",
-	"runServices": [
-		"workspaces"
-	],
+	"service": "web-dev",
+	// "runServices": [
+	// 	"workspaces"
+	// ],
 	// The optional 'workspaceFolder' property is the path VS Code should open by default when
 	// connected. This is typically a file mount in .devcontainer/docker-compose.yml
-	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"workspaceFolder": "/app",
 	"features": {
 		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
 		"ghcr.io/devcontainers/features/git:1": {}
@@ -25,8 +24,19 @@
 	// "features": {},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [
-		"web:5173"
-	]
+		// "web:5174"
+	],
+	"postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"DavidAnson.vscode-markdownlint",
+				"christian-kohler.npm-intellisense",
+				"ms-azuretools.vscode-docker"
+			]
+		}
+	}
 	// Uncomment the next line if you want start specific services in your Docker Compose config.
 	// "runServices": [],
 	// Uncomment the next line if you want to keep your containers running after VS Code shuts down.
