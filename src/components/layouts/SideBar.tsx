@@ -1,7 +1,5 @@
 import React from "react";
 import { Menu } from "lucide-react";
-// import { Input } from "./input";
-// import { Toggle } from "./toggle";
 import { Check } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -20,7 +18,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { EXTRA_PAGES, MAIN_PAGES } from "@/constants/constants";
+import { EXTRA_PAGES, MAIN_PAGES } from "@/config/constants";
 
 const mainPages = MAIN_PAGES;
 const extraPages = EXTRA_PAGES;

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MAIN_PAGES } from "@/constants/constants";
+import { MAIN_PAGES } from "@/config/constants";
 import { useNavigate } from "react-router-dom";
 import { Home, Annoyed, PenLine } from "lucide-react";
 import {

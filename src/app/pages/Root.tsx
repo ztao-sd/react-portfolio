@@ -1,6 +1,6 @@
 import { Outlet, useLocation } from "react-router-dom";
-import Background from "@/components/Background";
-import NavigationBar from "@/components/NavigationBar";
+import Background from "@/components/layouts/Background";
+import NavigationBar from "@/components/layouts/NavigationBar";
 import HomePage from "./Home";
 
 const Root = () => {

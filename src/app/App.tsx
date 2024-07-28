@@ -1,11 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Root from "./routes/Root";
-import ErrorPage from "./routes/Error";
-import HomePage from "./routes/Home";
-import AboutPage from "./routes/About";
-import BlogPage from "./routes/blog/Blog";
-import TicTacToePage from "./routes/TicTacToe";
-import DemoBlog from "./routes/blog/DemoBlog.mdx";
+import Root from "@/app/pages/Root";
+import ErrorPage from "@/app/pages/Error";
+import HomePage from "@/app/pages/Home";
+import AboutPage from "@/app/pages/About";
+import BlogPage from "@/app/pages/blog/Blog";
+import TicTacToePage from "@/app/pages/TicTacToe";
+import DemoBlog from "@/app/pages/blog/DemoBlog.mdx";
 
 const router = createBrowserRouter([
   {
